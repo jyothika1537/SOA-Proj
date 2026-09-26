@@ -1,0 +1,12 @@
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\AegisResourceServiceApplication.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\controller\ResourceController.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\dto\AllocationRequest.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\dto\AllocationResponse.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\dto\ResourceRequest.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\dto\ResourceResponse.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\entity\Resource.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\entity\ResourceStatus.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\entity\ResourceType.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\exception\ApiExceptionHandler.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\repository\ResourceRepository.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\src\main\java\com\aegis\resource\service\ResourceService.java

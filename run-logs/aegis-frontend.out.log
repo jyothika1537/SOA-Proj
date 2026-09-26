@@ -1,0 +1,15 @@
+
+> aegis-frontend@0.0.0 dev
+> vite --host 0.0.0.0
+
+[2m7:59:18 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v8.3.0[39m  [2mready in [0m[1m2289[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m3000[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.225.1:[1m3000[22m/[39m  [2mVMware Network Adap…[22m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.146.1:[1m3000[22m/[39m  [2mVMware Network Adap…[22m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.121.8.23:[1m3000[22m/[39m    [2mWi-Fi[22m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.30.224.1:[1m3000[22m/[39m   [2mvEthernet (WSL (Hyp…[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m7:59:19 am[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...

@@ -1,0 +1,33 @@
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\apache\logging\logging-parent\10.6.0\logging-parent-10.6.0.pom: no more data available - expected end tags </arg></compilerArgs></configuration></plugin></plugins></build></project> to close start tag <arg> from line 419 and start tag <compilerArgs> from line 418 and start tag <configuration> from line 412 and start tag <plugin> from line 402 and start tag <plugins> from line 336 and start tag <build> from line 267 and start tag <project> from line 18, parser stopped on TEXT seen ...\n            <a... @420:15 @ C:\Users\vucha_2pf78bb\.m2\repository\org\apache\logging\logging-parent\10.6.0\logging-parent-10.6.0.pom
+[FATAL] Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\cloud\spring-cloud-dependencies\2023.0.3\spring-cloud-dependencies-2023.0.3.pom: input contained no data @ C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\cloud\spring-cloud-dependencies\2023.0.3\spring-cloud-dependencies-2023.0.3.pom
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-web:jar is missing. @ line 22, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-data-jpa:jar is missing. @ line 26, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-validation:jar is missing. @ line 30, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar is missing. @ line 34, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-openfeign:jar is missing. @ line 38, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-loadbalancer:jar is missing. @ line 42, column 21
+[ERROR] 'dependencies.dependency.version' for org.postgresql:postgresql:jar is missing. @ line 46, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-test:jar is missing. @ line 51, column 21
+[ERROR] 'dependencies.dependency.version' for com.h2database:h2:jar is missing. @ line 56, column 21
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project com.aegis:aegis-response-service:1.0.0-SNAPSHOT (C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-response-service\pom.xml) has 11 errors
+[ERROR]     Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\apache\logging\logging-parent\10.6.0\logging-parent-10.6.0.pom: no more data available - expected end tags </arg></compilerArgs></configuration></plugin></plugins></build></project> to close start tag <arg> from line 419 and start tag <compilerArgs> from line 418 and start tag <configuration> from line 412 and start tag <plugin> from line 402 and start tag <plugins> from line 336 and start tag <build> from line 267 and start tag <project> from line 18, parser stopped on TEXT seen ...\n            <a... @420:15 @ C:\Users\vucha_2pf78bb\.m2\repository\org\apache\logging\logging-parent\10.6.0\logging-parent-10.6.0.pom
+[ERROR]     Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\cloud\spring-cloud-dependencies\2023.0.3\spring-cloud-dependencies-2023.0.3.pom: input contained no data @ C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\cloud\spring-cloud-dependencies\2023.0.3\spring-cloud-dependencies-2023.0.3.pom
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-web:jar is missing. @ line 22, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-data-jpa:jar is missing. @ line 26, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-validation:jar is missing. @ line 30, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:jar is missing. @ line 34, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-openfeign:jar is missing. @ line 38, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.cloud:spring-cloud-starter-loadbalancer:jar is missing. @ line 42, column 21
+[ERROR]     'dependencies.dependency.version' for org.postgresql:postgresql:jar is missing. @ line 46, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-test:jar is missing. @ line 51, column 21
+[ERROR]     'dependencies.dependency.version' for com.h2database:h2:jar is missing. @ line 56, column 21
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException

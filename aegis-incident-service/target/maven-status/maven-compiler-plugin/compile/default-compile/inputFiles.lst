@@ -1,0 +1,13 @@
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\AegisIncidentServiceApplication.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\controller\IncidentController.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\dto\IncidentRequest.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\dto\IncidentResponse.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\dto\IncidentStatusUpdateRequest.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\entity\Incident.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\entity\IncidentStatus.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\entity\IncidentType.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\entity\ResourceType.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\entity\Severity.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\exception\ApiExceptionHandler.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\repository\IncidentRepository.java
+C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\src\main\java\com\aegis\incident\service\IncidentService.java

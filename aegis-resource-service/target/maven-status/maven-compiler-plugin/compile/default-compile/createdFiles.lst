@@ -1,0 +1,15 @@
+com\aegis\resource\service\ResourceService.class
+com\aegis\resource\entity\ResourceType.class
+com\aegis\resource\exception\ApiExceptionHandler.class
+com\aegis\resource\AegisResourceServiceApplication.class
+com\aegis\resource\dto\AllocationRequest.class
+com\aegis\resource\dto\AllocationResponse.class
+com\aegis\resource\dto\ResourceRequest.class
+com\aegis\resource\dto\ResourceResponse$ResourceResponseBuilder.class
+com\aegis\resource\controller\ResourceController.class
+com\aegis\resource\entity\Resource$ResourceBuilder.class
+com\aegis\resource\repository\ResourceRepository.class
+com\aegis\resource\entity\ResourceStatus.class
+com\aegis\resource\dto\ResourceResponse.class
+com\aegis\resource\dto\AllocationResponse$AllocationResponseBuilder.class
+com\aegis\resource\entity\Resource.class

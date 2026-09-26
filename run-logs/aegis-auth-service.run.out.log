@@ -1,0 +1,142 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-22T08:06:59.182+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] c.a.auth.AegisAuthServiceApplication     : Starting AegisAuthServiceApplication using Java 21.0.7 with PID 16456 (C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-auth-service\target\classes started by vucha_2pf78bb in C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-auth-service)
+2026-09-22T08:06:59.186+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] c.a.auth.AegisAuthServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T08:07:00.259+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-22T08:07:00.415+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interface.
+2026-09-22T08:07:00.710+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=57229be5-c566-350f-ad10-6f82c9d6c29e
+2026-09-22T08:07:00.915+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-22T08:07:00.918+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-22T08:07:01.208+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-09-22T08:07:01.226+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T08:07:01.227+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-09-22T08:07:01.316+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T08:07:01.318+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2070 ms
+2026-09-22T08:07:01.486+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-22T08:07:01.539+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-09-22T08:07:01.570+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-22T08:07:01.977+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-22T08:07:02.015+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T08:07:02.197+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18513c23
+2026-09-22T08:07:02.199+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T08:07:02.245+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-22T08:07:03.278+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-22T08:07:03.412+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2026-09-22T08:07:03.412+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk6dotkott2kjsp8vw4d0m25fb7" of relation "users" does not exist, skipping
+2026-09-22T08:07:03.420+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-22T08:07:03.889+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-09-22T08:07:03.890+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-09-22T08:07:03.920+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-22T08:07:04.530+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-22T08:07:04.566+05:30  WARN 16456 --- [AUTH-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-22T08:07:04.589+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-22T08:07:04.611+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-22T08:07:04.614+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:07:04.625+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-22T08:07:04.625+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-22T08:07:04.626+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-22T08:07:04.626+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-22T08:07:04.626+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-22T08:07:04.627+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-22T08:07:04.627+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-22T08:07:04.945+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-22T08:07:04.946+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-22T08:07:04.947+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-22T08:07:04.949+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790044624948 with initial instances count: 0
+2026-09-22T08:07:04.954+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2026-09-22T08:07:04.955+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790044624954, current=UP, previous=STARTING]
+2026-09-22T08:07:04.956+05:30  INFO 16456 --- [AUTH-SERVICE] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/AUTH-SERVICE:8081: registering service...
+2026-09-22T08:07:04.973+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-09-22T08:07:04.974+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-09-22T08:07:04.982+05:30  INFO 16456 --- [AUTH-SERVICE] [           main] c.a.auth.AegisAuthServiceApplication     : Started AegisAuthServiceApplication in 6.405 seconds (process running for 6.92)
+2026-09-22T08:07:04.990+05:30  INFO 16456 --- [AUTH-SERVICE] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/AUTH-SERVICE:8081 - registration status: 204
+2026-09-22T08:07:34.953+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-22T08:07:34.954+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-22T08:07:34.954+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-22T08:07:34.955+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-22T08:07:34.955+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-22T08:07:34.956+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-09-22T08:07:34.956+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-22T08:07:35.003+05:30  INFO 16456 --- [AUTH-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-22T08:10:21.566+05:30  INFO 16456 --- [AUTH-SERVICE] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T08:10:21.567+05:30  INFO 16456 --- [AUTH-SERVICE] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T08:10:21.569+05:30  INFO 16456 --- [AUTH-SERVICE] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-22T08:12:04.645+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:17:04.653+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:22:04.656+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:27:04.667+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:32:04.686+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:37:04.708+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:42:04.720+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:47:04.728+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:28:11.094+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m8s78ms943µs600ns).
+2026-09-22T09:31:42.789+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:36:42.827+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:39:47.247+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s969ms698µs).
+2026-09-22T09:42:48.791+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:49:30.762+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m13s472ms105µs700ns).
+2026-09-22T09:53:32.295+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:58:32.306+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:03:32.317+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:08:32.362+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:13:32.387+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:18:32.423+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:23:32.443+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:28:32.458+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:33:32.470+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:38:32.485+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:43:32.495+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:48:32.500+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:53:32.513+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:58:32.518+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:01:35.875+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h2m33s997ms133µs600ns).
+2026-09-22T13:08:22.472+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m16s541ms584µs501ns).
+2026-09-22T13:09:23.028+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:14:23.065+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:19:23.099+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:24:23.127+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:29:23.165+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:34:23.196+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:39:23.238+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:44:23.270+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:49:23.285+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:00:47.893+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m24s780ms488µs500ns).
+2026-09-22T14:05:18.061+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:10:18.095+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:15:18.122+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:20:18.159+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:25:18.196+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:30:18.255+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:35:18.266+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:40:31.708+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:45:31.714+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:50:35.316+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:56:37.888+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m2s162ms253µs900ns).
+2026-09-22T15:00:07.476+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:05:07.501+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:10:07.539+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:15:07.552+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:20:07.590+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:25:07.598+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:30:07.618+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:35:07.657+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:40:07.687+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:43:04.267+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m25s730ms180µs800ns).
+2026-09-22T15:50:32.428+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m28s161ms722µs500ns).
+2026-09-22T15:55:01.579+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:00:01.615+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:05:01.619+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:11:52.233+05:30  WARN 16456 --- [AUTH-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m55s632ms680µs400ns).
+2026-09-22T16:13:21.152+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:18:21.156+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:23:21.172+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:28:21.189+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:33:21.196+05:30  INFO 16456 --- [AUTH-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

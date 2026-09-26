@@ -1,0 +1,138 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-22T08:06:59.145+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] c.a.i.AegisIncidentServiceApplication    : Starting AegisIncidentServiceApplication using Java 21.0.7 with PID 27520 (C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service\target\classes started by vucha_2pf78bb in C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-incident-service)
+2026-09-22T08:06:59.151+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] c.a.i.AegisIncidentServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T08:07:00.176+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-22T08:07:00.384+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 194 ms. Found 1 JPA repository interface.
+2026-09-22T08:07:00.651+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9b8cb7db-f219-3045-b8c6-f3451a9f7a17
+2026-09-22T08:07:00.826+05:30  WARN 27520 --- [INCIDENT-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-22T08:07:00.830+05:30  WARN 27520 --- [INCIDENT-SERVICE] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-22T08:07:01.091+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-09-22T08:07:01.105+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T08:07:01.106+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-09-22T08:07:01.191+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T08:07:01.193+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1970 ms
+2026-09-22T08:07:01.430+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-22T08:07:01.528+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-09-22T08:07:01.570+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-22T08:07:01.974+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-22T08:07:02.013+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-22T08:07:02.190+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17d816b3
+2026-09-22T08:07:02.193+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-22T08:07:02.237+05:30  WARN 27520 --- [INCIDENT-SERVICE] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-09-22T08:07:03.278+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-22T08:07:03.391+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-22T08:07:03.751+05:30  WARN 27520 --- [INCIDENT-SERVICE] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-22T08:07:04.217+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-09-22T08:07:04.254+05:30  WARN 27520 --- [INCIDENT-SERVICE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-22T08:07:04.270+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-22T08:07:04.290+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-22T08:07:04.294+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:07:04.302+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-22T08:07:04.302+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-22T08:07:04.303+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-22T08:07:04.303+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-22T08:07:04.304+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-22T08:07:04.304+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-09-22T08:07:04.304+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-22T08:07:04.784+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-22T08:07:04.787+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-09-22T08:07:04.789+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-09-22T08:07:04.791+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790044624791 with initial instances count: 0
+2026-09-22T08:07:04.796+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INCIDENT-SERVICE with eureka with status UP
+2026-09-22T08:07:04.797+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1790044624797, current=UP, previous=STARTING]
+2026-09-22T08:07:04.798+05:30  INFO 27520 --- [INCIDENT-SERVICE] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INCIDENT-SERVICE/INCIDENT-SERVICE:8082: registering service...
+2026-09-22T08:07:04.825+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-09-22T08:07:04.827+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-09-22T08:07:04.846+05:30  INFO 27520 --- [INCIDENT-SERVICE] [           main] c.a.i.AegisIncidentServiceApplication    : Started AegisIncidentServiceApplication in 6.295 seconds (process running for 6.961)
+2026-09-22T08:07:04.959+05:30  INFO 27520 --- [INCIDENT-SERVICE] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INCIDENT-SERVICE/INCIDENT-SERVICE:8082 - registration status: 204
+2026-09-22T08:07:34.795+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-09-22T08:07:34.797+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-09-22T08:07:34.799+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-09-22T08:07:34.800+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-09-22T08:07:34.800+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-09-22T08:07:34.800+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-09-22T08:07:34.801+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-09-22T08:07:34.862+05:30  INFO 27520 --- [INCIDENT-SERVICE] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-09-22T08:11:01.573+05:30  INFO 27520 --- [INCIDENT-SERVICE] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T08:11:01.574+05:30  INFO 27520 --- [INCIDENT-SERVICE] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T08:11:01.577+05:30  INFO 27520 --- [INCIDENT-SERVICE] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-22T08:12:04.319+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:17:04.322+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:22:04.329+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:27:04.339+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:32:04.356+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:37:04.363+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:42:04.375+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T08:47:04.393+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:28:11.073+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m8s71ms402µs).
+2026-09-22T09:31:42.462+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:36:42.500+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:39:47.169+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s969ms157µs601ns).
+2026-09-22T09:42:48.477+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:49:30.683+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m13s471ms803µs500ns).
+2026-09-22T09:53:31.981+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T09:58:32.024+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:03:32.050+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:08:32.081+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:13:32.109+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:18:32.125+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:23:32.128+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:28:32.144+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:33:32.160+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:38:32.171+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:43:32.179+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:48:32.187+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:53:32.205+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T10:58:32.221+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:01:35.836+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h2m33s988ms991µs200ns).
+2026-09-22T13:08:22.427+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m16s542ms745µs101ns).
+2026-09-22T13:09:22.729+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:14:22.754+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:19:22.788+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:24:22.814+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:29:22.853+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:34:22.880+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:39:22.895+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:44:22.911+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T13:49:22.924+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:00:47.839+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m24s774ms102µs600ns).
+2026-09-22T14:05:17.699+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:10:17.702+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:15:17.729+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:20:17.768+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:25:17.803+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:30:17.843+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:35:17.878+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:40:31.305+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:45:31.310+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:50:34.909+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T14:56:37.840+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m2s163ms528µs).
+2026-09-22T15:00:07.070+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:05:07.098+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:10:07.112+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:15:07.121+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:20:07.153+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:25:07.178+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:30:07.210+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:35:07.235+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:40:07.267+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T15:43:04.302+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m25s733ms545µs899ns).
+2026-09-22T15:50:32.459+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m28s157ms721µs301ns).
+2026-09-22T15:55:01.172+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:00:01.205+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:05:01.215+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:11:52.279+05:30  WARN 27520 --- [INCIDENT-SERVICE] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m55s632ms898µs900ns).
+2026-09-22T16:13:20.744+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:18:20.748+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:23:20.764+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:28:20.766+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-09-22T16:33:20.773+05:30  INFO 27520 --- [INCIDENT-SERVICE] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

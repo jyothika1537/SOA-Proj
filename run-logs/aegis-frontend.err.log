@@ -1,0 +1,40 @@
+[2m8:10:22 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mLogin error: Error: Login failed
+    at login (http://localhost:3000/src/services/api.js:22:21)
+    at async login (http://localhost:3000/src/context/AuthContext.jsx:26:17)
+    at async handleSubmit (http://localhost:3000/src/pages/Login.jsx:22:4)
+[2m8:10:45 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mRegister error: Error: Registration failed
+    at register (http://localhost:3000/src/services/api.js:31:21)
+    at async register (http://localhost:3000/src/context/AuthContext.jsx:40:4)
+    at async handleSubmit (http://localhost:3000/src/pages/Register.jsx:23:4)
+[2m11:03:34 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch dashboard data Error: Failed to fetch responses
+    at fetchResponses (http://localhost:3000/src/services/api.js:64:21)
+    at async Promise.all (index 2)
+    at async loadDashboardData (http://localhost:3000/src/pages/Dashboard.jsx:19:47)
+[2m11:03:34 am[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch dashboard data Error: Failed to fetch responses
+    at fetchResponses (http://localhost:3000/src/services/api.js:64:21)
+    at async Promise.all (index 2)
+    at async loadDashboardData (http://localhost:3000/src/pages/Dashboard.jsx:19:47)
+[2m1:51:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch dashboard data Error: Failed to fetch resources
+    at fetchResources (http://localhost:3000/src/services/api.js:50:21)
+    at async Promise.all (index 1)
+    at async loadDashboardData (http://localhost:3000/src/pages/Dashboard.jsx:19:47)
+[2m1:51:18 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mFailed to fetch dashboard data Error: Failed to fetch resources
+    at fetchResources (http://localhost:3000/src/services/api.js:50:21)
+    at async Promise.all (index 1)
+    at async loadDashboardData (http://localhost:3000/src/pages/Dashboard.jsx:19:47)
+[2m3:00:12 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mLogin error: Error: Login failed
+    at login (http://localhost:3000/src/services/api.js:22:21)
+    at async login (http://localhost:3000/src/context/AuthContext.jsx:26:17)
+    at async handleSubmit (http://localhost:3000/src/pages/Login.jsx:22:4)
+[2m3:00:20 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mLogin error: Error: Login failed
+    at login (http://localhost:3000/src/services/api.js:22:21)
+    at async login (http://localhost:3000/src/context/AuthContext.jsx:26:17)
+    at async handleSubmit (http://localhost:3000/src/pages/Login.jsx:22:4)
+[2m3:00:40 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mLogin error: Error: Login failed
+    at login (http://localhost:3000/src/services/api.js:22:21)
+    at async login (http://localhost:3000/src/context/AuthContext.jsx:26:17)
+    at async handleSubmit (http://localhost:3000/src/pages/Login.jsx:22:4)
+[2m3:01:01 pm[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [2m[console.error] [22mLogin error: Error: Login failed
+    at login (http://localhost:3000/src/services/api.js:22:21)
+    at async login (http://localhost:3000/src/context/AuthContext.jsx:26:17)
+    at async handleSubmit (http://localhost:3000/src/pages/Login.jsx:22:4)

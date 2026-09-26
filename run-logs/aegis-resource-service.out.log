@@ -1,0 +1,25 @@
+[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\session\spring-session-bom\3.3.2\spring-session-bom-3.3.2.pom: input contained no data @ C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\session\spring-session-bom\3.3.2\spring-session-bom-3.3.2.pom
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-web:jar is missing. @ line 18, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-data-jpa:jar is missing. @ line 22, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-validation:jar is missing. @ line 26, column 21
+[ERROR] 'dependencies.dependency.version' for org.postgresql:postgresql:jar is missing. @ line 34, column 21
+[ERROR] 'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-test:jar is missing. @ line 39, column 21
+[ERROR] 'dependencies.dependency.version' for com.h2database:h2:jar is missing. @ line 44, column 21
+ @ 
+[ERROR] The build could not read 1 project -> [Help 1]
+[ERROR]   
+[ERROR]   The project com.aegis:aegis-resource-service:1.0.0-SNAPSHOT (C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-resource-service\pom.xml) has 7 errors
+[ERROR]     Non-readable POM C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\session\spring-session-bom\3.3.2\spring-session-bom-3.3.2.pom: input contained no data @ C:\Users\vucha_2pf78bb\.m2\repository\org\springframework\session\spring-session-bom\3.3.2\spring-session-bom-3.3.2.pom
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-web:jar is missing. @ line 18, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-data-jpa:jar is missing. @ line 22, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-validation:jar is missing. @ line 26, column 21
+[ERROR]     'dependencies.dependency.version' for org.postgresql:postgresql:jar is missing. @ line 34, column 21
+[ERROR]     'dependencies.dependency.version' for org.springframework.boot:spring-boot-starter-test:jar is missing. @ line 39, column 21
+[ERROR]     'dependencies.dependency.version' for com.h2database:h2:jar is missing. @ line 44, column 21
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException

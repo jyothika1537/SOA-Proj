@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: auth-route
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**,/api/users/**
+        - id: incident-route
+          uri: lb://INCIDENT-SERVICE
+          predicates:
+            - Path=/api/incidents/**
+        - id: resource-route
+          uri: lb://RESOURCE-SERVICE
+          predicates:
+            - Path=/api/resources/**
+        - id: response-route
+          uri: lb://RESPONSE-SERVICE
+          predicates:
+            - Path=/api/responses/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}

@@ -1,0 +1,432 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-09-22T08:06:59.167+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.a.eureka.AegisEurekaServerApplication  : Starting AegisEurekaServerApplication using Java 21.0.7 with PID 25452 (C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-eureka-server\target\classes started by vucha_2pf78bb in C:\Users\vucha_2pf78bb\OneDrive\Desktop\SOA\SOA@\SOA@\aegis-emergency-platform\aegis-eureka-server)
+2026-09-22T08:06:59.176+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.a.eureka.AegisEurekaServerApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-09-22T08:07:00.554+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=87746a2b-2328-3d95-9ccc-d54ec1ae6728
+2026-09-22T08:07:00.607+05:30  WARN 25452 --- [aegis-eureka-server] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-22T08:07:00.612+05:30  WARN 25452 --- [aegis-eureka-server] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-09-22T08:07:00.945+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-09-22T08:07:00.965+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-22T08:07:00.967+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-09-22T08:07:01.080+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-22T08:07:01.082+05:30  INFO 25452 --- [aegis-eureka-server] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1837 ms
+2026-09-22T08:07:02.163+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-09-22T08:07:02.165+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-09-22T08:07:02.383+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-09-22T08:07:02.384+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-09-22T08:07:03.287+05:30  WARN 25452 --- [aegis-eureka-server] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-22T08:07:03.307+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-09-22T08:07:03.325+05:30  INFO 25452 --- [aegis-eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-09-22T08:07:03.325+05:30  INFO 25452 --- [aegis-eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-09-22T08:07:03.327+05:30  INFO 25452 --- [aegis-eureka-server] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1790044623326 with initial instances count: 0
+2026-09-22T08:07:03.377+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-09-22T08:07:03.379+05:30  WARN 25452 --- [aegis-eureka-server] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T08:07:03.392+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-09-22T08:07:03.392+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-09-22T08:07:03.407+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-09-22T08:07:03.461+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AEGIS-EUREKA-SERVER with eureka with status UP
+2026-09-22T08:07:03.471+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-09-22T08:07:03.472+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-09-22T08:07:03.473+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-09-22T08:07:03.473+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-09-22T08:07:03.474+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-09-22T08:07:03.477+05:30  INFO 25452 --- [aegis-eureka-server] [       Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-09-22T08:07:03.489+05:30  INFO 25452 --- [aegis-eureka-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2026-09-22T08:07:03.491+05:30  INFO 25452 --- [aegis-eureka-server] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-09-22T08:07:03.510+05:30  INFO 25452 --- [aegis-eureka-server] [           main] c.a.eureka.AegisEurekaServerApplication  : Started AegisEurekaServerApplication in 4.959 seconds (process running for 5.635)
+2026-09-22T08:07:04.686+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-22T08:07:04.686+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-22T08:07:04.687+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-22T08:07:04.954+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance RESPONSE-SERVICE/RESPONSE-SERVICE:8084 with status UP (replication=false)
+2026-09-22T08:07:04.954+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance RESOURCE-SERVICE/RESOURCE-SERVICE:8083 with status UP (replication=false)
+2026-09-22T08:07:04.954+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INCIDENT-SERVICE/INCIDENT-SERVICE:8082 with status UP (replication=false)
+2026-09-22T08:07:04.989+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICE/AUTH-SERVICE:8081 with status UP (replication=false)
+2026-09-22T08:07:32.494+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:07:32.494+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:07:32.522+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:08:03.475+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T08:09:03.476+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T08:10:03.485+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T08:11:03.498+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T08:12:03.499+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T08:13:03.510+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T08:14:03.513+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T08:15:03.513+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T08:16:03.526+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T08:17:03.388+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T08:17:03.529+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T08:18:03.541+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T08:19:03.557+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T08:20:03.569+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T08:21:03.583+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T08:22:03.393+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T08:22:03.589+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T08:23:03.595+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T08:24:03.602+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T08:25:03.607+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T08:26:03.615+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T08:27:03.395+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T08:27:03.630+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T08:28:03.632+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T08:29:03.641+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T08:30:03.649+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T08:31:03.652+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T08:32:03.655+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T08:33:03.663+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T08:33:28.138+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:33:30.413+05:30  INFO 25452 --- [aegis-eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status DOWN (replication=false)
+2026-09-22T08:33:30.424+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/API-GATEWAY:8080 (replication=false)
+2026-09-22T08:33:34.047+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:33:34.049+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:33:34.072+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:34:03.675+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T08:34:22.612+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:34:24.826+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status DOWN (replication=false)
+2026-09-22T08:34:24.838+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/API-GATEWAY:8080 (replication=false)
+2026-09-22T08:34:34.133+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:34:34.135+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - API-GATEWAY:8080
+2026-09-22T08:34:34.148+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:35:03.675+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T08:36:03.679+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T08:36:51.096+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T08:37:03.408+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T08:37:03.408+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T08:37:03.690+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T08:38:03.703+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T08:39:03.716+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T08:40:03.721+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T08:41:03.732+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T08:42:03.733+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T08:43:03.739+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T08:44:03.748+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T08:45:03.750+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T08:46:03.763+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T08:47:03.425+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T08:47:03.766+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T08:48:03.780+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T09:28:41.848+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2378068ms
+2026-09-22T09:29:41.855+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T09:30:41.861+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T09:31:41.479+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T09:31:41.867+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T09:32:41.871+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T09:33:41.874+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T09:34:41.875+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T09:35:41.876+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T09:36:41.487+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T09:36:41.877+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T09:37:41.890+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T09:39:47.858+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 65968ms
+2026-09-22T09:40:47.868+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T09:41:47.877+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T09:42:47.882+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T09:49:31.355+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 343473ms
+2026-09-22T09:50:31.365+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T09:51:31.380+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T09:52:31.384+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T09:53:30.912+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T09:53:30.943+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T09:53:31.399+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T09:54:31.407+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T09:55:31.419+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T09:56:31.434+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T09:57:31.442+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T09:58:31.449+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T09:59:31.459+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T10:00:31.464+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:01:31.470+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T10:02:31.479+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T10:03:30.971+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:03:31.488+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T10:04:31.494+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:05:31.501+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:06:31.513+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T10:07:31.515+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T10:08:30.924+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T10:08:31.529+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:09:31.536+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T10:10:31.543+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:11:31.551+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:12:31.554+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T10:13:31.002+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:13:31.561+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:14:31.565+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:15:31.575+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T10:16:31.585+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T10:17:31.590+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:18:31.598+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T10:19:31.607+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T10:20:31.616+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T10:21:31.624+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:22:31.641+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 17ms
+2026-09-22T10:23:30.935+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T10:23:31.028+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:23:31.655+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T10:24:31.669+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:25:31.677+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:26:31.690+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T10:27:31.695+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T10:28:31.709+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:29:31.727+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 17ms
+2026-09-22T10:30:31.729+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T10:31:31.740+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T10:32:31.755+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T10:33:31.033+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:33:31.769+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:34:31.786+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 17ms
+2026-09-22T10:35:31.788+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T10:36:31.793+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:37:31.804+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T10:38:30.953+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T10:38:31.810+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T10:39:31.813+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T10:40:31.814+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T10:41:31.828+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T10:42:31.843+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T10:43:31.043+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:43:31.847+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:44:31.862+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T10:45:31.863+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T10:46:31.867+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T10:47:31.878+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T10:48:31.891+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:49:31.899+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T10:50:31.899+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T10:51:31.905+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T10:52:31.919+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T10:53:30.953+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T10:53:31.048+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T10:53:31.921+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T10:54:31.934+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T10:55:31.942+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T10:56:31.954+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T10:57:31.964+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T10:58:31.969+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T13:01:35.967+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7323998ms
+2026-09-22T13:02:35.971+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T13:03:35.983+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T13:08:22.527+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 226544ms
+2026-09-22T13:09:21.567+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T13:09:22.541+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T13:10:22.553+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T13:11:22.568+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T13:12:22.577+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:13:22.592+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T13:14:21.470+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T13:14:22.597+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T13:15:22.608+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T13:16:22.614+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T13:17:22.620+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T13:18:22.628+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:19:21.603+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T13:19:22.631+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T13:20:22.643+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T13:21:22.648+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T13:22:22.656+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T13:23:22.669+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T13:24:22.675+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T13:25:22.686+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T13:26:22.688+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T13:27:22.693+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T13:28:22.703+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T13:29:21.478+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T13:29:21.617+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T13:29:22.711+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:30:22.721+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T13:31:22.726+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T13:32:22.736+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T13:33:22.738+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T13:34:22.740+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T13:35:22.742+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T13:36:22.755+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T13:37:22.768+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T13:38:22.777+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T13:39:21.653+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T13:39:22.786+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:40:22.794+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:41:22.807+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T13:42:22.816+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T13:43:22.823+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T13:44:21.491+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T13:44:22.834+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T13:45:22.839+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T13:46:22.841+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T13:47:22.843+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T13:48:22.848+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T13:49:21.679+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T13:49:22.861+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:01:17.623+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 654761ms
+2026-09-22T14:02:17.626+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T14:03:17.074+05:30  INFO 25452 --- [aegis-eureka-server] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T14:03:17.632+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T14:03:19.340+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status DOWN (replication=false)
+2026-09-22T14:03:19.373+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/API-GATEWAY:8080 (replication=false)
+2026-09-22T14:03:42.035+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: API-GATEWAY - API-GATEWAY:8080
+2026-09-22T14:03:42.057+05:30  WARN 25452 --- [aegis-eureka-server] [nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): API-GATEWAY - API-GATEWAY:8080
+2026-09-22T14:03:42.224+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status UP (replication=false)
+2026-09-22T14:04:17.644+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T14:05:17.654+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T14:06:17.668+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T14:07:17.668+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T14:08:17.678+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T14:09:17.689+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T14:10:16.262+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T14:10:16.479+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T14:10:17.727+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:11:17.707+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T14:12:17.714+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T14:13:17.720+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T14:14:17.733+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:15:17.746+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:16:17.752+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T14:17:17.765+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T14:18:17.796+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:19:17.776+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T14:20:16.505+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T14:20:17.784+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:21:17.791+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:22:17.792+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T14:23:17.807+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T14:24:17.816+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T14:25:16.271+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T14:25:17.819+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T14:26:17.832+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:27:17.840+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:28:17.849+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T14:29:17.862+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:30:16.533+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T14:30:17.876+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T14:31:17.878+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T14:32:17.885+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T14:33:17.898+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T14:34:17.906+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T14:35:17.907+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T14:36:17.912+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T14:37:17.925+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T14:38:31.350+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13424ms
+2026-09-22T14:39:31.357+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:40:29.688+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T14:40:29.968+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T14:40:31.366+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T14:41:31.368+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T14:42:31.369+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T14:43:31.383+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:44:31.388+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T14:45:31.389+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T14:46:34.119+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2729ms
+2026-09-22T14:47:34.134+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T14:48:34.148+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T14:49:34.158+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T14:50:33.571+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T14:50:35.035+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 877ms
+2026-09-22T14:51:35.042+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T14:57:07.203+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 272160ms
+2026-09-22T14:58:07.211+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T14:59:07.217+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T15:00:05.444+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T15:00:07.225+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T15:01:07.231+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T15:02:07.242+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T15:03:07.248+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T15:04:07.261+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T15:05:05.738+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T15:05:07.265+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T15:06:07.267+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T15:07:07.268+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T15:08:07.281+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T15:09:07.283+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:10:07.287+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T15:11:07.289+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:12:07.292+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-09-22T15:13:07.292+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:14:07.305+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T15:15:05.446+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T15:15:05.773+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T15:15:07.307+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:16:07.307+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T15:17:07.313+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T15:18:07.322+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T15:19:07.332+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T15:20:07.339+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T15:21:07.354+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T15:22:07.364+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T15:23:07.373+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T15:24:07.389+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T15:25:05.804+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T15:25:07.397+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T15:26:07.398+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T15:27:07.403+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T15:28:07.406+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T15:29:07.415+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T15:30:05.447+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T15:30:07.430+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T15:31:07.440+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T15:32:07.449+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T15:33:07.462+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T15:34:07.469+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T15:35:05.840+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T15:35:07.470+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:36:07.474+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T15:37:07.487+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T15:38:07.489+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T15:39:07.501+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T15:40:07.516+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T15:51:01.391+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 593875ms
+2026-09-22T15:52:01.399+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T15:53:01.407+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T15:54:01.417+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T15:54:59.318+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T15:54:59.724+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T15:55:01.422+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T15:56:01.426+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T15:57:01.431+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T15:58:01.431+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T15:59:01.445+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T16:00:01.457+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T16:01:01.472+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T16:02:01.475+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T16:03:01.485+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-09-22T16:04:01.489+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T16:04:59.761+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T16:05:01.494+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T16:06:01.500+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2026-09-22T16:07:01.513+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+2026-09-22T16:08:01.527+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T16:12:21.067+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 205632ms
+2026-09-22T16:13:18.843+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T16:13:21.073+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2026-09-22T16:14:21.087+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T16:15:21.098+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2026-09-22T16:16:21.102+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T16:17:21.117+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2026-09-22T16:18:19.314+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T16:18:21.126+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T16:19:21.140+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T16:20:21.146+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2026-09-22T16:21:21.159+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T16:22:21.162+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T16:23:21.173+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-09-22T16:24:21.181+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T16:25:21.185+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-09-22T16:26:21.190+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+2026-09-22T16:27:21.205+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T16:28:18.857+05:30  INFO 25452 --- [aegis-eureka-server] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 10
+2026-09-22T16:28:19.328+05:30  WARN 25452 --- [aegis-eureka-server] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-09-22T16:28:21.221+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2026-09-22T16:29:21.228+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-09-22T16:30:21.242+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-09-22T16:30:58.457+05:30  INFO 25452 --- [aegis-eureka-server] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/API-GATEWAY:8080 with status DOWN (replication=false)
+2026-09-22T16:31:03.599+05:30  INFO 25452 --- [aegis-eureka-server] [io-8761-exec-11] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/API-GATEWAY:8080 (replication=false)
+2026-09-22T16:31:21.242+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T16:32:21.244+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-09-22T16:33:21.243+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T16:34:21.244+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-09-22T16:35:21.246+05:30  INFO 25452 --- [aegis-eureka-server] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
