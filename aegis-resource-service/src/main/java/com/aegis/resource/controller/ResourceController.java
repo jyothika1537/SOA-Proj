@@ -32,13 +32,19 @@ public class ResourceController {
     }
 
     @GetMapping("/{resourceId}")
-    public ResponseEntity<ResourceResponse> getResourceById(@PathVariable String resourceId) {
+    public ResponseEntity<ResourceResponse> getResourceById(@PathVariable("resourceId") String resourceId) {
         return ResponseEntity.ok(resourceService.getResourceById(resourceId));
     }
 
     @GetMapping("/type/{type}")
-    public ResponseEntity<List<ResourceResponse>> getResourcesByType(@PathVariable ResourceType type) {
+    public ResponseEntity<List<ResourceResponse>> getResourcesByType(@PathVariable("type") ResourceType type) {
         return ResponseEntity.ok(resourceService.getResourcesByType(type));
+    }
+
+    @PutMapping("/{resourceId}")
+    public ResponseEntity<ResourceResponse> updateResource(@PathVariable("resourceId") String resourceId,
+                                                           @Valid @RequestBody ResourceRequest request) {
+        return ResponseEntity.ok(resourceService.updateResource(resourceId, request));
     }
 
     @PostMapping("/allocate")
@@ -47,9 +53,15 @@ public class ResourceController {
     }
 
     @PostMapping("/{resourceId}/release")
-    public ResponseEntity<AllocationResponse> releaseResource(@PathVariable String resourceId,
+    public ResponseEntity<AllocationResponse> releaseResource(@PathVariable("resourceId") String resourceId,
                                                             @RequestParam Integer quantity,
                                                             @RequestParam String incidentId) {
         return ResponseEntity.ok(resourceService.releaseResource(resourceId, quantity, incidentId));
+    }
+
+    @DeleteMapping("/{resourceId}")
+    public ResponseEntity<Void> deleteResource(@PathVariable("resourceId") String resourceId) {
+        resourceService.deleteResource(resourceId);
+        return ResponseEntity.noContent().build();
     }
 }

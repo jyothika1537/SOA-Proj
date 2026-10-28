@@ -1,0 +1,23 @@
+# Maven build output
+**/target/
+
+# Java logs
+*.log
+logs/
+
+# Dependency and build output
+node_modules/
+dist/
+build/
+coverage/
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+
+# IDE/editor state
+.vscode/
+.idea/
+*.iml
+.DS_Store

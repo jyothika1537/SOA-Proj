@@ -1,4 +1,11 @@
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
+
+class ApiError extends Error {
+    constructor(status, message) {
+        super(message);
+        this.status = status;
+    }
+}
 
 function getAuthToken() {
     return localStorage.getItem('token');
@@ -7,76 +14,37 @@ function getAuthToken() {
 function getHeaders() {
     const headers = { 'Content-Type': 'application/json' };
     const token = getAuthToken();
-    if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-    }
+    if (token) headers.Authorization = `Bearer ${token}`;
     return headers;
 }
 
+async function request(path, options = {}) {
+    const response = await fetch(`${BASE_URL}${path}`, { ...options, headers: { ...getHeaders(), ...(options.headers || {}) } });
+    if (response.status === 401) { localStorage.removeItem('token'); localStorage.removeItem('role'); localStorage.removeItem('email'); window.dispatchEvent(new Event('auth:unauthorized')); }
+    if (!response.ok) { let message = 'Request failed'; try { message = (await response.json()).message || message; } catch {} throw new ApiError(response.status, message); }
+    return response.status === 204 ? null : response.json();
+}
+
 export async function login(email, password) {
-    const res = await fetch(`${BASE_URL}/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-    });
-    if (!res.ok) throw new Error('Login failed');
-    return res.json();
+    return request('/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) });
 }
 
 export async function register(user) {
-    const res = await fetch(`${BASE_URL}/auth/register`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
-    });
-    if (!res.ok) throw new Error('Registration failed');
-    return res.json();
+    return request('/auth/register', { method: 'POST', body: JSON.stringify(user) });
 }
 
-export async function fetchIncidents() {
-    const res = await fetch(`${BASE_URL}/incidents`, { headers: getHeaders() });
-    if (!res.ok) throw new Error('Failed to fetch incidents');
-    return res.json();
-}
+export async function fetchIncidents() { return request('/incidents'); }
+export async function createIncident(incident) { return request('/incidents', { method: 'POST', body: JSON.stringify(incident) }); }
+export async function updateIncident(id, incident) { return request(`/incidents/${id}`, { method: 'PUT', body: JSON.stringify(incident) }); }
+export async function updateIncidentStatus(id, incidentStatus) { return request(`/incidents/${id}/status`, { method: 'PATCH', body: JSON.stringify({ incidentStatus }) }); }
+export async function deleteIncident(id) { return request(`/incidents/${id}`, { method: 'DELETE' }); }
 
-export async function createIncident(incident) {
-    const res = await fetch(`${BASE_URL}/incidents`, {
-        method: 'POST',
-        headers: getHeaders(),
-        body: JSON.stringify(incident)
-    });
-    if (!res.ok) throw new Error('Failed to create incident');
-    return res.json();
-}
+export async function fetchResources() { return request('/resources'); }
+export async function createResource(resource) { return request('/resources', { method: 'POST', body: JSON.stringify(resource) }); }
+export async function updateResource(id, resource) { return request(`/resources/${id}`, { method: 'PUT', body: JSON.stringify(resource) }); }
+export async function deleteResource(id) { return request(`/resources/${id}`, { method: 'DELETE' }); }
 
-export async function fetchResources() {
-    const res = await fetch(`${BASE_URL}/resources`, { headers: getHeaders() });
-    if (!res.ok) throw new Error('Failed to fetch resources');
-    return res.json();
-}
-
-export async function createResource(resource) {
-    const res = await fetch(`${BASE_URL}/resources`, {
-        method: 'POST',
-        headers: getHeaders(),
-        body: JSON.stringify(resource)
-    });
-    if (!res.ok) throw new Error('Failed to create resource');
-    return res.json();
-}
-
-export async function fetchResponses() {
-    const res = await fetch(`${BASE_URL}/responses`, { headers: getHeaders() });
-    if (!res.ok) throw new Error('Failed to fetch responses');
-    return res.json();
-}
-
-export async function createResponse(response) {
-    const res = await fetch(`${BASE_URL}/responses`, {
-        method: 'POST',
-        headers: getHeaders(),
-        body: JSON.stringify(response)
-    });
-    if (!res.ok) throw new Error('Failed to create response');
-    return res.json();
-}
+export async function fetchResponses() { return request('/responses'); }
+export async function createResponse(response) { return request('/responses', { method: 'POST', body: JSON.stringify(response) }); }
+export async function updateResponseStatus(id, responseStatus) { return request(`/responses/${id}/status`, { method: 'PATCH', body: JSON.stringify({ responseStatus }) }); }
+export async function deleteResponse(id) { return request(`/responses/${id}`, { method: 'DELETE' }); }

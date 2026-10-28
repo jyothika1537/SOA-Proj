@@ -23,6 +23,5 @@ public class ResourceRequest {
     @NotBlank(message = "Deployment zone is required")
     private String deploymentZone;
 
-    @NotNull(message = "Status is required")
     private ResourceStatus status = ResourceStatus.AVAILABLE;
 }

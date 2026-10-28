@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { fetchResources } from '../services/api';
+import { fetchResources, createResource, deleteResource } from '../services/api';
 import './TableStyles.css';
 
 export const Resources = () => {
     const [resources, setResources] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         const load = async () => {
             try {
                 const data = await fetchResources();
                 setResources(data);
-            } catch (err) {
-                console.error(err);
+            } catch (err) { setError(err.message);
             } finally {
                 setLoading(false);
             }
@@ -27,6 +27,8 @@ export const Resources = () => {
             <div className="page-header">
                 <h1>Resources</h1>
                 <p>Manage equipment and personnel availability.</p>
+            <button onClick={async () => { const raw = window.prompt('Resource JSON'); if (!raw) return; try { await createResource(JSON.parse(raw)); window.location.reload(); } catch (e) { setError(e.message); } }}>Register resource</button>
+            {error && <div className="error-state">{error}</div>}
             </div>
             
             <div className="table-container glass-panel">
@@ -38,12 +40,12 @@ export const Resources = () => {
                             <th>Zone</th>
                             <th>Total Qty</th>
                             <th>Available Qty</th>
-                            <th>Status</th>
+                            <th>Status</th><th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {resources.length === 0 ? (
-                            <tr><td colSpan="6" className="empty-state">No resources available.</td></tr>
+                            <tr><td colSpan="7" className="empty-state">No resources available.</td></tr>
                         ) : (
                             resources.map(res => (
                                 <tr key={res.resourceId}>
@@ -57,6 +59,7 @@ export const Resources = () => {
                                             {res.status}
                                         </span>
                                     </td>
+                                    <td><button onClick={async () => { if (window.confirm('Delete resource?')) { await deleteResource(res.resourceId); window.location.reload(); } }}>Delete</button></td>
                                 </tr>
                             ))
                         )}

@@ -30,18 +30,30 @@ public class ResponseController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ResponseResponse> getResponseById(@PathVariable String id) {
+    public ResponseEntity<ResponseResponse> getResponseById(@PathVariable("id") String id) {
         return ResponseEntity.ok(responseService.getResponseById(id));
     }
 
     @GetMapping("/incident/{incidentId}")
-    public ResponseEntity<List<ResponseResponse>> getResponsesByIncidentId(@PathVariable String incidentId) {
+    public ResponseEntity<List<ResponseResponse>> getResponsesByIncidentId(@PathVariable("incidentId") String incidentId) {
         return ResponseEntity.ok(responseService.getResponsesByIncidentId(incidentId));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<ResponseResponse> updateResponse(@PathVariable("id") String id,
+                                                           @Valid @RequestBody CreateResponseRequest request) {
+        return ResponseEntity.ok(responseService.updateResponse(id, request));
+    }
+
     @PatchMapping("/{id}/status")
-    public ResponseEntity<ResponseResponse> updateStatus(@PathVariable String id,
+    public ResponseEntity<ResponseResponse> updateStatus(@PathVariable("id") String id,
                                                        @Valid @RequestBody ResponseStatusUpdateRequest request) {
         return ResponseEntity.ok(responseService.updateStatus(id, request));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteResponse(@PathVariable("id") String id) {
+        responseService.deleteResponse(id);
+        return ResponseEntity.noContent().build();
     }
 }

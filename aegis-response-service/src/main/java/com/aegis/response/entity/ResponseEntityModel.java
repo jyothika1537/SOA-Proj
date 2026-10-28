@@ -32,6 +32,9 @@ public class ResponseEntityModel {
     @Column(nullable = false)
     private String responderId;
 
+    @Column(nullable = false)
+    private Integer allocatedQuantity;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ResponseStatus responseStatus;

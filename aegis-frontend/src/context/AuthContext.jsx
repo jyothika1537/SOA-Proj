@@ -11,20 +11,26 @@ export const AuthProvider = ({ children }) => {
         const token = localStorage.getItem('token');
         const role = localStorage.getItem('role');
         const email = localStorage.getItem('email');
-        if (token) {
-            setUser({ email, role });
+        try {
+            const payload = token ? JSON.parse(atob(token.split('.')[1])) : null;
+            if (payload?.exp && payload.exp * 1000 <= Date.now()) throw new Error('expired');
+            if (token) setUser({ email, role });
+        } catch {
+            localStorage.removeItem('token'); localStorage.removeItem('role'); localStorage.removeItem('email');
         }
+        const unauthorized = () => setUser(null);
+        window.addEventListener('auth:unauthorized', unauthorized);
         setLoading(false);
+        return () => window.removeEventListener('auth:unauthorized', unauthorized);
     }, []);
 
     const login = async (email, password) => {
         try {
             const data = await apiLogin(email, password);
             localStorage.setItem('token', data.token);
-            // Assuming the token or the response has some user info we can use. 
-            // The e2e script doesn't show user info returned, but we save email for display
-            localStorage.setItem('email', email);
-            setUser({ email });
+            localStorage.setItem('role', data.role);
+            localStorage.setItem('email', data.name || email);
+            setUser({ email: data.name || email, role: data.role });
             return true;
         } catch (error) {
             console.error('Login error:', error);

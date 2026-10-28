@@ -17,8 +17,7 @@ public class CreateResponseRequest {
     @NotBlank(message = "Responder ID is required")
     private String responderId;
 
-    @NotNull(message = "Priority is required")
-    private ResponsePriority priority;
+    private ResponsePriority priority = ResponsePriority.MEDIUM;
 
     private String notes;
 }

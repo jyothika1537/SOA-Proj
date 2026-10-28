@@ -49,18 +49,31 @@ public class ResourceService {
     }
 
     @Transactional
+    public ResourceResponse updateResource(String resourceId, ResourceRequest request) {
+        Resource resource = resourceRepository.findById(resourceId)
+                .orElseThrow(() -> new EntityNotFoundException("Resource not found with id: " + resourceId));
+        int allocatedQuantity = resource.getQuantity() - resource.getAvailableQuantity();
+        if (request.getQuantity() < allocatedQuantity) {
+            throw new IllegalArgumentException("Quantity cannot be lower than currently allocated quantity");
+        }
+        resource.setResourceName(request.getResourceName());
+        resource.setResourceType(request.getResourceType());
+        resource.setQuantity(request.getQuantity());
+        resource.setAvailableQuantity(request.getQuantity() - allocatedQuantity);
+        resource.setDeploymentZone(request.getDeploymentZone());
+        resource.setStatus(request.getStatus());
+        resource.setLastUpdated(LocalDateTime.now());
+        return mapToResponse(resourceRepository.save(resource));
+    }
+
+    @Transactional
     public AllocationResponse allocateResource(AllocationRequest request) {
         Resource resource = resourceRepository.findById(request.getResourceId())
                 .orElseThrow(() -> new EntityNotFoundException("Resource not found with id: " + request.getResourceId()));
 
-        if (resource.getAvailableQuantity() < request.getQuantity()) {
-            return AllocationResponse.builder()
-                    .allocated(false)
-                    .resourceId(resource.getResourceId())
-                    .incidentId(request.getIncidentId())
-                    .quantity(request.getQuantity())
-                    .message("Insufficient available quantity")
-                    .build();
+        if (resource.getStatus() != ResourceStatus.AVAILABLE
+                || resource.getAvailableQuantity() < request.getQuantity()) {
+            throw new IllegalStateException("Resource is unavailable or has insufficient quantity");
         }
 
         int updated = resourceRepository.allocateQuantity(request.getResourceId(), request.getQuantity());
@@ -94,6 +107,9 @@ public class ResourceService {
         Resource resource = resourceRepository.findById(resourceId)
                 .orElseThrow(() -> new EntityNotFoundException("Resource not found with id: " + resourceId));
 
+        if (quantity == null || quantity < 1 || quantity > resource.getQuantity() - resource.getAvailableQuantity()) {
+            throw new IllegalArgumentException("Invalid release quantity");
+        }
         int updated = resourceRepository.releaseQuantity(resourceId, quantity);
         if (updated == 0) {
             return AllocationResponse.builder()
@@ -106,6 +122,9 @@ public class ResourceService {
         }
 
         Resource updatedResource = resourceRepository.findById(resourceId).orElse(resource);
+        if (requestIncidentMismatch(updatedResource, incidentId)) {
+            throw new IllegalArgumentException("Resource is not assigned to incident: " + incidentId);
+        }
         updatedResource.setAssignedIncidentId(null);
         updatedResource.setStatus(ResourceStatus.AVAILABLE);
         updatedResource.setLastUpdated(LocalDateTime.now());
@@ -118,6 +137,20 @@ public class ResourceService {
                 .quantity(quantity)
                 .message("Resource released successfully")
                 .build();
+    }
+
+    @Transactional
+    public void deleteResource(String resourceId) {
+        Resource resource = resourceRepository.findById(resourceId)
+                .orElseThrow(() -> new EntityNotFoundException("Resource not found with id: " + resourceId));
+        if (resource.getAvailableQuantity() < resource.getQuantity()) {
+            throw new IllegalStateException("Cannot delete an allocated resource");
+        }
+        resourceRepository.delete(resource);
+    }
+
+    private boolean requestIncidentMismatch(Resource resource, String incidentId) {
+        return resource.getAssignedIncidentId() != null && !resource.getAssignedIncidentId().equals(incidentId);
     }
 
     private ResourceResponse mapToResponse(Resource resource) {

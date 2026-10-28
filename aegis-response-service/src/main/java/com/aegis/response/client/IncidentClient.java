@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "INCIDENT-SERVICE")
+@FeignClient(name = "INCIDENT-SERVICE", configuration = com.aegis.response.config.FeignAuthConfig.class)
 public interface IncidentClient {
 
     @GetMapping("/api/incidents/{id}")

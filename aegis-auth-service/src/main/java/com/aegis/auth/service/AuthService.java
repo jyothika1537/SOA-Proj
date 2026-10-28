@@ -5,10 +5,10 @@ import com.aegis.auth.dto.LoginResponse;
 import com.aegis.auth.dto.RegisterRequest;
 import com.aegis.auth.dto.UserResponse;
 import com.aegis.auth.entity.User;
+import com.aegis.auth.entity.Role;
 import com.aegis.auth.repository.UserRepository;
 import com.aegis.auth.security.JwtUtil;
 import com.aegis.auth.security.UserPrincipal;
-import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -17,7 +17,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
 public class AuthService {
 
     private final UserRepository userRepository;
@@ -25,16 +24,25 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
+    public AuthService(UserRepository userRepository, PasswordEncoder passwordEncoder,
+                       AuthenticationManager authenticationManager, JwtUtil jwtUtil) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.authenticationManager = authenticationManager;
+        this.jwtUtil = jwtUtil;
+    }
+
     public UserResponse register(RegisterRequest request) {
-        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+        String email = request.getEmail().trim().toLowerCase();
+        if (userRepository.findByEmail(email).isPresent()) {
             throw new DataIntegrityViolationException("User with this email already exists");
         }
 
         User user = User.builder()
                 .name(request.getName())
-                .email(request.getEmail().trim())
+                .email(email)
                 .passwordHash(passwordEncoder.encode(request.getPassword()))
-                .role(request.getRole())
+                .role(Role.OFFICIAL)
                 .build();
 
         User saved = userRepository.save(user);

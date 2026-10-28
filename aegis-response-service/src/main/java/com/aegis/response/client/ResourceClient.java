@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "RESOURCE-SERVICE")
+@FeignClient(name = "RESOURCE-SERVICE", configuration = com.aegis.response.config.FeignAuthConfig.class)
 public interface ResourceClient {
 
     @PostMapping("/api/resources/allocate")

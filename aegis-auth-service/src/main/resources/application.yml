@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/aegis_auth_db
     username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:sat@789S}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -33,7 +33,7 @@ eureka:
     instance-id: ${spring.application.name}:${server.port}
 
 jwt:
-  secret: ${JWT_SECRET:QWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=}
+  secret: ${JWT_SECRET}
   expiration: ${JWT_EXPIRATION:86400000}
 
 logging:

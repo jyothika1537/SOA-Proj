@@ -18,6 +18,7 @@ public class ResponseResponse {
     private String incidentId;
     private String resourceId;
     private String responderId;
+    private Integer allocatedQuantity;
     private ResponseStatus responseStatus;
     private ResponsePriority priority;
     private LocalDateTime dispatchedAt;

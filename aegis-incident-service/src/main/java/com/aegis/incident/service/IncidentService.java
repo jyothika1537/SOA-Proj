@@ -6,8 +6,10 @@ import com.aegis.incident.dto.IncidentStatusUpdateRequest;
 import com.aegis.incident.entity.Incident;
 import com.aegis.incident.entity.IncidentStatus;
 import com.aegis.incident.repository.IncidentRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -41,18 +43,46 @@ public class IncidentService {
 
     public IncidentResponse getIncidentById(String id) {
         return mapToResponse(incidentRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Incident not found with id: " + id)));
+                .orElseThrow(() -> new EntityNotFoundException("Incident not found with id: " + id)));
     }
 
     public List<IncidentResponse> getIncidentsByStatus(IncidentStatus status) {
         return incidentRepository.findByIncidentStatus(status).stream().map(this::mapToResponse).toList();
     }
 
+    @Transactional
+    public IncidentResponse updateIncident(String id, IncidentRequest request) {
+        Incident incident = incidentRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Incident not found with id: " + id));
+        incident.setTitle(request.getTitle());
+        incident.setDescription(request.getDescription());
+        incident.setIncidentType(request.getIncidentType());
+        incident.setSeverity(request.getSeverity());
+        incident.setLocation(request.getLocation());
+        incident.setLatitude(request.getLatitude());
+        incident.setLongitude(request.getLongitude());
+        incident.setReportedBy(request.getReportedBy());
+        incident.setRequiredResourceType(request.getRequiredResourceType());
+        incident.setRequiredResourceQuantity(request.getRequiredResourceQuantity());
+        return mapToResponse(incidentRepository.save(incident));
+    }
+
+    @Transactional
     public IncidentResponse updateIncidentStatus(String id, IncidentStatusUpdateRequest request) {
         Incident incident = incidentRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Incident not found with id: " + id));
+                .orElseThrow(() -> new EntityNotFoundException("Incident not found with id: " + id));
         incident.setIncidentStatus(request.getIncidentStatus());
         return mapToResponse(incidentRepository.save(incident));
+    }
+
+    @Transactional
+    public void deleteIncident(String id) {
+        Incident incident = incidentRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Incident not found with id: " + id));
+        if (incident.getIncidentStatus() == IncidentStatus.ACTIVE) {
+            throw new IllegalStateException("Cannot delete an incident that has an active response");
+        }
+        incidentRepository.delete(incident);
     }
 
     private IncidentResponse mapToResponse(Incident incident) {
